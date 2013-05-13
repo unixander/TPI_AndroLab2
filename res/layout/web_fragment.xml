@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:id="@+id/search_layout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" >
+		<EditText
+		    android:id="@+id/search_string"
+		    android:inputType="text"
+		    android:layout_width="match_parent"
+		    android:layout_height="match_parent"
+		    android:layout_alignParentTop="true"
+		    android:layout_alignParentLeft="true" />
+
+		<ImageButton
+		    android:id="@+id/search_button"
+		    android:layout_width="30dp"
+		    android:layout_height="30dp"
+		    android:layout_alignRight="@id/search_string"
+		    android:layout_centerVertical="true"
+		    android:background="@null"
+		    android:layout_marginRight="5dp"
+		    android:contentDescription="@string/search"
+		    android:src="@drawable/glyphicons_search"
+		    android:visibility="visible" />
+		
+		<ProgressBar
+		    android:id="@+id/search_progress"
+		    android:layout_height="30dp"
+		    android:layout_width="30dp"
+		    style="@android:style/Widget.ProgressBar.Small.Inverse"
+		    android:layout_alignRight="@id/search_string"
+		    android:layout_centerVertical="true"
+		    android:layout_marginRight="5dp"
+		    android:visibility="invisible"/>
+    </RelativeLayout>
+    
+    <WebView
+		    android:id="@+id/search_webview"
+		    android:layout_width="match_parent"
+		    android:layout_height="fill_parent"
+		    android:layout_below="@+id/search_layout" 
+		    android:fadeScrollbars="false"
+		    android:focusable="true"
+		    android:focusableInTouchMode="true"
+		    />
+    <ImageButton 
+        android:id="@+id/previous_page_btn"
+        android:src="@drawable/glyphicons_circle_arrow_left"
+        android:background="@null"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@id/search_webview"
+        android:layout_alignBottom="@id/search_webview"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:visibility="invisible"/>
+    
+    <ImageButton 
+        android:id="@+id/next_page_btn"
+        android:src="@drawable/glyphicons_circle_arrow_right"
+        android:background="@null"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_toRightOf="@id/previous_page_btn"
+        android:layout_alignBottom="@id/search_webview"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:visibility="invisible"/>
+	
+</RelativeLayout>

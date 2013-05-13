@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">True Web Browser</string>
+    <string name="action_menu">Tabs</string>
+	<string name="search">Search</string>
+	<string name="close_tab">Close Tab</string>
+	<string name="new_tab">New Tab</string>
+</resources>
