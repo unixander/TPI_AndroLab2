@@ -1,6 +1,4 @@
 ## True Web Browser ##
-
-
 ----------
 
 Description
